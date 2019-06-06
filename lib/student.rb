@@ -40,7 +40,7 @@ class Student
       INSERT INTO daily_show_guests (year, googleknowledge_occupation, show, gr, raw_guest_list)
       VALUES (?,?,?,?,?)
       SQL
-    
+
     DB[:conn].execute(sql, self.year, self.googleknowledge_occupation, self.show, self.group, self.raw_guest_list)
 
     @id = DB[:conn].execute("SELECT last_insert_rowid() FROM daily_show_guests")[0][0]
