@@ -5,8 +5,9 @@ class Student
   @@all = []
   attr_accessor :name, :grade
 
-  def initialize(attributes)
-    attributes.each {|key, value| self.send("#{key}=", value)}
+  def initialize(name, grade)
+    @name = name
+    @grade = grade
     @@all << self
   end
 
