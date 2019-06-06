@@ -41,7 +41,7 @@ class Student
       VALUES (?,?)
       SQL
 
-    DB[:conn].execute(sql, self.year, self.googleknowledge_occupation, self.show, self.group, self.raw_guest_list)
+    DB[:conn].execute(sql, self.name, self.grade)
 
     @id = DB[:conn].execute("SELECT last_insert_rowid() FROM daily_show_guests")[0][0]
   end
